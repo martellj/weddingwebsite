@@ -9,11 +9,11 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-/*
-var server = app.listen(80,function(){
+
+var server = app.listen(8080,function(){
   console.log("Server is listening on port 3000.");
 });
-*/
+
 console.log("JOHN LALALALALA");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
