@@ -18,5 +18,9 @@
   "devDependencies": {
     "bower": "^1.7.2",
     "del": "^2.2.0"
+  },
+  "scripts": {
+    "start": "node app",
+    "postinstall": "gulp default"
   }
 }
