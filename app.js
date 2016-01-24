@@ -10,8 +10,10 @@ var users = require('./routes/users');
 
 var app = express();
 
-var server = app.listen(80,function(){
-  console.log("Server is listening on port 3000.");
+var port = Number(process.env.PORT || 5000);
+
+var server = app.listen(port,function(){
+  console.log("Server is listening on port " + port);
 });
 
 console.log("JOHN LALALALALA");
