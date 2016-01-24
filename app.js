@@ -10,8 +10,8 @@ var users = require('./routes/users');
 
 var app = express();
 
-var server = app.listen(80,function(){
-  console.log("Server is listening on port 8003.");
+var server = app.listen(3000,function(){
+  console.log("Server is listening on port 3000.");
 });
 console.log("JOHN LALALALALA");
 // view engine setup
