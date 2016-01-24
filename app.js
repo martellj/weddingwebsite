@@ -13,7 +13,7 @@ var app = express();
 var server = app.listen(80,function(){
   console.log("Server is listening on port 8003.");
 });
-
+console.log("JOHN LALALALALA");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
