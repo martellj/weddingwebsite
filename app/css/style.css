@@ -70,12 +70,12 @@ hr{
 }
 
 .wedding .well a{
-	color:#D32020;
+	color:#7B1DD3;
 	text-decoration:none;
 }
 
 .wedding .well a:hover{
-	color:#cb1e08;;
+	color: #9925d3;
 }
 
 
@@ -100,7 +100,7 @@ hr{
 }
 
 .navbar-default .navbar-toggle {
-	border-color: #D32020;
+	border-color: #7b1dd3;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
