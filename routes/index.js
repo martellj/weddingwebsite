@@ -5,7 +5,7 @@ var Mailgun = require('mailgun').Mailgun;
 var mg = new Mailgun(process.env.MAILGUN_API_KEY);
 
 function sendMail(recip, obj) {
-  sendText('john@johnmartell.net',
+  mg.sendText('john@johnmartell.net',
       [recip],
       "Thanks for your RSVP",
       "<html><body><h3>Thanks for your RSVP!</h3><div><b>Name:</b> " + obj.name + "</div><div><b>Email:</b> " + obj.email + "</div><div><b>Attending:</b> " + obj.attending + "</div><div><b>Dinner Option:</b> " + obj.dinnerOption +"</div></body></html>",
