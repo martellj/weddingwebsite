@@ -2,7 +2,7 @@ $(document).ready(function(){
   var rsvpBtn = $("#rsvpBtn");
   var resetRsvp = $("#resetRsvp");
   function btnState(enabled) {
-      rsvpBtn.prop("disabled", enabled);
+      rsvpBtn.prop("disabled", !enabled);
   }
   function switchRsvpState(showSuccess){
       var rsvp = $("#rsvp-form");
