@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app",
+    "postinstall": "gulp"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -12,16 +13,12 @@
     "express": "~4.13.1",
     "gulp": "^3.9.0",
     "jade": "~1.11.0",
+    "mongodb": "^2.1.7",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "bower": "^1.7.2",
     "del": "^2.2.0"
-  },
-  "scripts": {
-
-    "start": "node app",
-    "postinstall": "gulp"
   }
 }

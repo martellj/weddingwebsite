@@ -15,8 +15,6 @@ var port = Number(process.env.PORT || 5000);
 var server = app.listen(port,function(){
   console.log("Server is listening on port " + port);
 });
-
-console.log("JOHN LALALALALA");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

@@ -144,20 +144,18 @@
 						<div class="groom">
 							<h3>John</h3>
 							<hr>
-							<p class="text-center">Duis a risus sed dolor placerat semper quis in urna. Nam risus magna, fringilla sit amet blandit viverra, dignissim eget est. Ut commodo ullamcorper risus nec mattis. Ut commodo ullamcorper risus nec.</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div class="love">
 							<i class="icon-heart"></i>
-							<h3>12,DEC 2012</h3>
+							<h3>02,APR 2016</h3>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div class="bride">
 							<h3>Casey</h3>
 							<hr>
-							<p class="text-center">Duis a risus sed dolor placerat semper quis in urna. Nam risus magna, fringilla sit amet blandit viverra, dignissim eget est. Ut commodo ullamcorper risus nec mattis. Ut commodo ullamcorper risus nec.</p>
 						</div>
 					</div>
 				</div>
@@ -221,7 +219,7 @@
 							<h3><i class="icon-heart"></i> Ceremony & Reception</h3>
 							Ceremony begins at 4:30 PM at
 
-							<a href="#">Royal Cliff Eagan</a>
+							<a href="http://royalcliffineagan.com/">Royal Cliff Eagan</a>
 
 							<p>2280 Cliff Rd.
 
@@ -229,7 +227,6 @@
 
 							651-895-1088</p>
                             <p>
-							Get Directions
 
 							Reception to immediately follow at the Royal Cliff</p>
 
@@ -239,39 +236,62 @@
 					<div class="col-md-4 col-sm-4">
 						<div class="well">
 							 <h3><i class="icon-glass"></i> Wedding Party</h3>
-							<p>Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus rutrum aliquet.</p>
-							<img src="img/wedding.jpg" alt="" class="img-responsive"/>
-							<h5>Ring Bearer</h5>
-							<p>John Kanan</p>
-							<h5>Bridesmaids:</h5>
-							<p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet.</p>
-							<h5>Groomsmen:</h5>
-							<p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet.</p>
+
+
+							<h5>Bridesmaids</h5>
+<p>
+							Nicky Williams, Sister of the Bride
+
+							Rachel Jensen, Friend of the Bride
+
+							Jessica Davis, Friend of the Bride
+
+							Liz Wek, Friend of the Bride
+
+							Norine Quick-Lindberg, Friend of the Bride
+
+							Amanda Jilk-Nelson, Friend of the Bride
+</p>
+							<h5>Groomsmen</h5>
+<p>
+							Codie See, Friend of the Groom
+
+							Brandon Dachel, Friend of the Groom
+
+							Jake Brown, Friend of the Groom
+
+							Tony Loiselle, Friend of the Groom
+
+							Josh Krebs, , Friend of the Groom
+
+							Logan Baier, Friend of the Groom</p>
+							
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div class="well">
+
+
 							<h3><i class="icon-home"></i> Accomodations</h3>
-							<a href="#">Royal Church</a>
-							<p>12, New Charka Road
-								New York City, NY 43423
-								123) 456-7890
-							</p>
-							<a href="#">Get Direction</a>
-							<hr>
-							 <h3><i class="icon-truck"></i> Reception</h3>
-							 <img src="img/car.jpg" alt="" class="img-responsive"/>
-							<a href="#">Royal Church</a>
-							<p>12, New Charka Road
-								New York City, NY 43423
-								123) 456-7890
-							</p>
-							<a href="#">Get Direction</a>
+
+							<a href="http://hiltongardeninn.hilton.com/en/gi/groups/personalized/M/MSPEHGI-WMW-20160401/index.jhtml?WT.mc_id=POG">Hilton Garden Inn Eagan</a>
+							<p>
+							1975 Rahncliff Ct.
+							Eagan, MN 55122
+							651-686-4605</p>
+
+							<a href="https://www.choicehotels.com/minnesota/eagan/quality-inn-hotels/mn160">Quality Inn & Suites Eagan</a>
+
+							<p>1950 Rahncliff Ct,
+							Eagan, MN 55122
+							651-681-9266</p>
+
+
 						</div>
 					</div>
 				</div>
-				<a name="rsvp" id="rsvp"></a>
 				<hr>
+				<a name="rsvp" id="rsvp"></a>
 				
 			</div>
 		</div>
@@ -293,8 +313,11 @@
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
-						<div class="well">
-							<p>Nulla facilisi. Sed justo dui, scelerisque ut consectetur vel, eleifend id erat.Morbi auctor adipiscing tempor.</p>
+						<div class="well" style="display: none;" id="success-form">
+							<p>You have successfully RSVPed!  A confirmation email should have been sent to your email address.  <a id="resetRsvp" href="#">Click here</a> to RSVP for an additional guest.</p>
+						</div>
+						<div class="well" id="rsvp-form">
+							<p>Please RSVP once for each person attending the wedding.</p>
 							<form class="form-horizontal" role="form">
 							    <div class="form-group">
 									<label class="control-form col-md-3" for="name">Name</label>
@@ -309,14 +332,27 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-form col-md-3" for="attentive">Attending?</label>
+									<label class="control-form col-md-3" for="attending">Attending?</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control" id="attentive">
+										<select id="attending" class="form-control">
+											<option value="true">Yes</option>
+											<option value="false">No</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-form col-md-3" for="dinnerOption">Dinner Option</label>
+									<div class="col-md-9">
+										<select id="dinnerOption" class="form-control">
+											<option value="chicken">Chicken (Chicken Parmesan)</option>
+											<option value="steak">Steak</option>
+											<option value="vegetarian">Vegetarian (Pasta Primavera)</option>
+										</select>
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="col-md-9 col-md-offset-3">
-									<input type="button" class="btn btn-danger" value="Submit">
+									<input type="button" class="btn btn-danger" value="Submit" id="rsvpBtn">
 									</div>
 								</div>
 							</form>
@@ -366,7 +402,7 @@
 		<script src="js/html5shiv.js"></script>
 		<!-- Custom JS -->
 		<script src="js/custom.js"></script>
-
+		<script src="js/rsvp.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
