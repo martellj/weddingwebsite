@@ -32,7 +32,7 @@ router.post('/rsvp', function(req,res) {
   };
 
   sendMail("jnmartell2007@gmail.com",mongoObject);
-  sendMail(obj.email,mongoObject);
+  sendMail(mongoObject.email,mongoObject);
 
   MongoClient.connect(url, function(err, db) {
     db.collection('rsvp').insertOne(mongoObject);

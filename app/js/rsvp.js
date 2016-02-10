@@ -1,6 +1,10 @@
 $(document).ready(function(){
   var rsvpBtn = $("#rsvpBtn");
   var resetRsvp = $("#resetRsvp");
+
+  var attending = $("#attending");
+  var dinnerOption = $("#dinnerOption");
+
   function btnState(enabled) {
       rsvpBtn.prop("disabled", !enabled);
   }
@@ -14,6 +18,8 @@ $(document).ready(function(){
       } else {
           rsvp.find("input[type=text]").val("");
           rsvp.find("select option:eq(0)").prop("selected", true);
+          dinnerOption.prop("disabled", true);
+          dinnerOption.find("option:eq(0)").prop("selected", true);
           success.hide();
           rsvp.fadeIn(500);
       }
@@ -22,6 +28,17 @@ $(document).ready(function(){
         e.preventDefault();
         btnState(true);
         switchRsvpState(false);
+    });
+
+    attending.on("change",function(){
+
+        if (!(!!attending.find(":selected").val())){
+            dinnerOption.prop("disabled", true);
+            dinnerOption.find("option:eq(0)").prop("selected", true);
+        } else {
+            dinnerOption.prop("disabled", false);
+        }
+
     });
 
     rsvpBtn.on("click", function(){
