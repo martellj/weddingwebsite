@@ -5,7 +5,7 @@ var Mailgun = require('mailgun').Mailgun;
 var mg = new Mailgun(process.env.MAILGUN_API_KEY);
 
 function sendMail(recip, obj) {
-    sendRaw('john@johnmartell.net',
+      mg.sendRaw('john@johnmartell.net',
         [recip],
         'From: john@johnmartell.net' +
         '\nTo: ' + recip +
