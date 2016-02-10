@@ -32,8 +32,8 @@ router.post('/rsvp', function(req,res) {
 
   var json = req.body;
   var mongoObject = {
-    name : encodeURIComponent(json.name) || "NOT PROVIDED",
-    email : json.email || "NOT PROVIDED",
+    name : decodeURI(json.name) || "NOT PROVIDED",
+    email : decodeURI(json.email) || "NOT PROVIDED",
     dinnerOption : encodeURIComponent(json.dinnerOption) || "NOT PROVIDED",
     attending : !!json.attending
   };
