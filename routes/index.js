@@ -9,7 +9,7 @@ function sendMail(recip, obj) {
       [recip],
       "Thanks for your RSVP",
       "<html><body><h3>Thanks for your RSVP!</h3><div><b>Name:</b> " + obj.name + "</div><div><b>Email:</b> " + obj.email + "</div><div><b>Attending:</b> " + obj.attending + "</div><div><b>Dinner Option:</b> " + obj.dinnerOption +"</div></body></html>",
-      {},
+      {"Content-Type" : "text/html"},
       function(err) {
         err && console.log(err)
       });
