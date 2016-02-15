@@ -53,6 +53,11 @@ $(document).ready(function(){
             return;
         }
 
+        if (!!$("#attending").val() && $("#dinnerOption").val() === "na") {
+            alert("Please select a dinner option.");
+            return;
+        }
+
        var json = {
            "name" : $("#name").val(),
            "email" : $("#email").val(),
