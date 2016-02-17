@@ -12,7 +12,7 @@ function sendMail(recip, obj) {
              '\nTo: ' + recip +
              '\nContent-Type: text/html; charset=utf-8' +
              '\nSubject: Thanks for your RSVP' +
-             "\n\n<html><body><h3>Thanks for your RSVP!</h3><div><b>Name:</b> " + obj.name + "</div><div><b>Email:</b> " + obj.email + "</div><div><b>Attending:</b> " + (!!obj.attending ? "Yes" : "No") + "</div><div><b>Dinner Option:</b> " + obj.dinnerOption + "</div></body></html>",
+             "\n\n<html><body><h3>Thanks for your RSVP!</h3><div><b>Name:</b> " + obj.name + "</div><div><b>Email:</b> " + obj.email + "</div><div><b>Attending:</b> " + (obj.attending === "true" ? "Yes" : "No") + "</div><div><b>Dinner Option:</b> " + obj.dinnerOption + "</div></body></html>",
              function (err) {
                  err && console.log(err)
              });
