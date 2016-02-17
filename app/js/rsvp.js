@@ -56,7 +56,7 @@ $(document).ready(function(){
        var json = {
            "name" : $("#name").val(),
            "email" : $("#email").val(),
-           "attending" : $("#attending option:selected").val(),
+           "attending" : $("#attending :selected").val(),
            "dinnerOption" : $("#dinnerOption option:selected").val()
        }
 

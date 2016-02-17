@@ -35,8 +35,9 @@ router.post('/rsvp', function(req,res) {
     name : decodeURI(json.name) || "NOT PROVIDED",
     email : decodeURI(json.email) || "NOT PROVIDED",
     dinnerOption : encodeURIComponent(json.dinnerOption) || "NOT PROVIDED",
-    attending : !!json.attending
+    attending : json.attending === "true" ? true : false
   };
+    
 
   sendMail("jnmartell2007@gmail.com",mongoObject);
   sendMail(mongoObject.email,mongoObject);
