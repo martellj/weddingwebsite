@@ -28,13 +28,12 @@ router.get('/', function(req,res) {
 });
 
 router.get('/rsvp', function(req,res) {
-
+    var url = process.env.M_CONNECTION_STRING;
     MongoClient.connect(url, function(err, db) {
         var data = db.collection('rsvp').find({});
         db.close();
         res.send(data)
     });
-
 });
 
 router.post('/rsvp', function(req,res) {
