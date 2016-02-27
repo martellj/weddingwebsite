@@ -27,7 +27,25 @@ router.get('/', function(req,res) {
   res.sendfile('public/index.html');
 });
 
+router.get('/rsvp', function(req,res) {
+    var url = process.env.M_CONNECTION_STRING;
+    MongoClient.connect(url, function(err, db) {
+        var data = db.collection('rsvp').find();
+        var arr = []
+        data.each(function(err, item) {
+            // If the item is null then the cursor is exhausted/empty and closed
+            if(item == null) {
+                db.close(); // you may not want to close the DB if you have more code....
+                res.send(arr);
+                return;
+            }
+            arr.push(item);
+        });
 
+    });
+
+
+});
 
 router.post('/rsvp', function(req,res) {
   var url = process.env.M_CONNECTION_STRING;
