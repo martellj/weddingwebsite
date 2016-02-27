@@ -27,14 +27,7 @@ router.get('/', function(req,res) {
   res.sendfile('public/index.html');
 });
 
-router.get('/rsvp', function(req,res) {
-    var url = process.env.M_CONNECTION_STRING;
-    MongoClient.connect(url, function(err, db) {
-        var data = db.collection('rsvp').find({});
-        db.close();
-        res.send(data)
-    });
-});
+
 
 router.post('/rsvp', function(req,res) {
   var url = process.env.M_CONNECTION_STRING;
@@ -46,7 +39,6 @@ router.post('/rsvp', function(req,res) {
     dinnerOption : encodeURIComponent(json.dinnerOption) || "NOT PROVIDED",
     attending : json.attending
   };
-
 
   sendMail("jnmartell2007@gmail.com",mongoObject);
   sendMail(mongoObject.email,mongoObject);
